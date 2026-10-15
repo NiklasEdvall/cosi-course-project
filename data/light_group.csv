@@ -1,7 +1,6 @@
 Participant_id,Group,Age,Sex,Country,Hippocampal_volume_baseline,Hippocampal_volume_post,Amygdala_volume_baseline,Amygdala_volume_post
 sub-001,Light_group,30,Female,Sweden,7.6,7.64,2.88,2.96
 sub-002,Light_group,26,Female,Australia,8.25,8.25,3.16,3.2
-sub-003,Light_group,32,Female,Australia,7.4,NA,3.66,3.61
 sub-004,Light_group,30,Female,Sweden,6.88,6.89,3.45,3.49
 sub-005,Light_group,18,Female,Sweden,6.9,6.88,3.42,3.53
 sub-006,Light_group,24,Male,Australia,5.65,5.64,4.31,4.31
@@ -10,7 +9,6 @@ sub-009,Light_group,29,Female,Australia,6.07,6.08,3.58,3.69
 sub-010,Light_group,25,Female,Sweden,6.98,7.05,3.18,3.17
 sub-012,Light_group,36,Male,Australia,6.49,6.62,3.61,3.62
 sub-014,Light_group,25,Female,Sweden,7.77,7.8,3.66,3.7
-sub-021,Light_group,26,Male,Australia,7.64,NA,2.87,2.86
 sub-023,Light_group,26,Female,Sweden,5.64,5.76,3.92,3.91
 sub-025,Light_group,29,Male,Sweden,7.96,7.96,3.37,3.35
 sub-029,Light_group,40,Male,Sweden,8.95,9.0,4.03,3.85
