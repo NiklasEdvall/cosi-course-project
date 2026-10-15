@@ -23,13 +23,21 @@ data.loc[
     "Hippocampal_volume_post"
 ] = pd.NA
 
-# Report missing values
+# Check the missing values
 print("Missing values:")
 print(data.isna().sum())
 
-# Count missing post-treatment hippocampal measurements
-missing_post_hippo = data["Hippocampal_volume_post"].isna().sum()
-print("Missing post-treatment measurements:", missing_post_hippo)
+# Check which groups have participants with missing values
+missing_subjects = data[data.isna().any(axis=1)]
+print("\nMissing participants by group:")
+print(missing_subjects["Group"].value_counts())
+
+# Remove participants with missing values
+data = data.dropna()
+
+# Check how many participants remain in each group
+print("\nRemaining participants by group:")
+print(data["Group"].value_counts())
 
 # Save the cleaned dataset separately. N.B: folder paths that you are in.
 data.to_csv("../data/bright_light_data_clean.csv", index=False, na_rep="NA")
