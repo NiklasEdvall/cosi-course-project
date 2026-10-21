@@ -8,7 +8,7 @@ This project investigates changes in hippocampal and amygdala volume following a
 
 ## Workflow
 
-![](figures/flowchart_workflow.png)
+![](figures/flowchart_workflow.svg)
 
 ## Folder structure
 
