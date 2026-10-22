@@ -1,0 +1,160 @@
+---
+title: "Bright-Light Therapy — Summary Report"
+date: today
+format:
+  html:
+    page-layout: full
+    max-width: 1600px
+    self-contained: true
+    output-file: summary_report.html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+# This file
+
+This report investigates changes in hippocampal and amygdala volume following
+an eight-week bright-light therapy study. Participants were randomly assigned
+to a control group or a bright-light group. MRI measurements were collected
+before and after the intervention.
+
+# Descriptive statistics
+
+The original sample consisted of 80 participants, with 40 in each group.
+Three participants had missing post-treatment hippocampal volume measurements. One individual had unrealistically high hippocampal measurements, and was thus excluded.
+After cleaning, 76 participants remained, with 38 participants in each group.
+
+<!-- Information source: scripts/clean_data.py and scripts/descriptive_stats.py -->
+
+```{python}
+# Run this script separately in the terminal:
+# python3 descriptive_stats.py
+#
+# Run it from the scripts folder.
+# The output provides descriptive statistics for this report.
+```
+
+# Plotting descriptive statistics
+
+The demographic figures were created using `scripts/create_descriptive_figures.py`.
+
+<!-- Information source: scripts/create_descriptive_figures.py -->
+
+```{python}
+# Run separately in the terminal from the scripts folder:
+# python3 create_descriptive_figures.py
+```
+
+## What is the age distribution by group?
+
+The mean age was 26.8 years in the control group and 28.2 years in the
+bright-light group.
+
+![](figures/age_distribution.png)
+
+## What is the sex distribution by group?
+
+The control group included 20 females and 18 males. The bright-light group
+included 19 females and 19 males.
+
+![](figures/sex_distribution.png)
+
+## Does the country of origin differ between the groups?
+
+The control group included 24 participants from Australia and 14 from Sweden.
+The bright-light group included 16 participants from Australia and 22 from
+Sweden. The country distribution therefore differed between the groups. This difference may be relevant when interpreting the results. However, the
+difference alone does not establish that country is a confounding factor.
+
+![](figures/country_distribution.png)
+
+# Hippocampal volume
+
+## Does hippocampal volume change from baseline to post-treatment?
+
+A paired t-test compared hippocampal volume before and after the intervention
+in the same participants.
+
+<!-- Results source: scripts/t_tests.py -->
+
+The change was statistically significant
+(*t* = 3.55, *p* < .001), indicating that hippocampal volume changed
+on average across the participants.
+
+<!-- Figure source: figures/hippocampal_baseline_post.png -->
+
+![](figures/hippocampal_baseline_post.png)
+
+## Does this change differ between the control and bright-light groups?
+
+A Welch's independent t-test compared the change scores between groups.
+
+<!-- Results source: scripts/t_tests.py -->
+
+The difference between groups was not statistically significant
+(*t* = -0.90, *p* = .374). There was insufficient evidence that hippocampal
+volume change differed between the control and bright-light groups.
+
+<!-- Figure source: figures/hippocampal_change_by_group.png -->
+
+![](figures/hippocampal_change_by_group.png)
+
+# Amygdala volume
+
+## Does amygdala volume change from baseline to post-treatment?
+
+A paired t-test compared amygdala volume before and after the intervention
+in the same participants.
+
+<!-- Results source: scripts/t_tests.py -->
+
+The change was statistically significant
+(*t* = 4.05, *p* < .001), indicating that amygdala volume changed
+on average across the participants.
+
+<!-- Figure source: figures/amygdala_baseline_post.png -->
+
+![](figures/amygdala_baseline_post.png)
+
+## Does this change differ between the control and bright-light groups?
+
+A Welch's independent t-test compared amygdala volume change between groups.
+
+<!-- Results source: scripts/t_tests.py -->
+
+The difference between groups was not statistically significant
+(*t* = -1.29, *p* = .203). There was insufficient evidence that amygdala
+volume change differed between the control and bright-light groups.
+
+<!-- Figure source: figures/amygdala_change_by_group.png -->
+
+![](figures/amygdala_change_by_group.png)
+
+# Relationship between hippocampal and amygdala volume changes
+
+## Are changes in hippocampal volume associated with changes in amygdala volume?
+
+A Pearson correlation examined the relationship between the changes in the
+two brain regions.
+
+<!-- Results source: scripts/correlation.py -->
+
+The correlation was weak and positive (*r* = .158, *p* = .172).
+The association was not statistically significant, so there was insufficient
+evidence of a linear relationship between changes in the two brain regions.
+
+<!-- Figure source: figures/brain_volume_correlation_by_group.png -->
+
+![](figures/brain_volume_correlation_by_group.png)
+
+# Conclusion
+
+Hippocampal and amygdala volumes changed significantly from baseline to post-treatment 
+when participants were considered together. However, neither region showed a significant difference 
+in volume change between the control and bright-light groups.
+
+The correlation between changes in the two brain regions was weak and not statistically significant. 
+Overall, there was insufficient evidence that bright-light therapy produced different changes in 
+brain volume compared with the control condition.
