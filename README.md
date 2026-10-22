@@ -12,7 +12,7 @@ This project investigates changes in hippocampal and amygdala volume following a
 
 ## Folder structure
 
-The `data/` folder contains the raw data `.csv` file as well as the cleaned dataset. The `scripts/` folder contains the full Python code for running the analysis. The `figures/` folder contains all generated figures. The `summary_report.qmd` file is located in the project root.
+The `data/` folder contains the raw data `.csv` file as well as the cleaned dataset. The `scripts/` folder contains all python scripts neccesary for running the analysis. The `figures/` folder contains all generated figures. The `summary_report.qmd` file is located in the project root.
 
 ### `data/`
 - `bright_light_data.csv` — raw dataset
@@ -28,7 +28,7 @@ The `data/` folder contains the raw data `.csv` file as well as the cleaned data
 
 `t_tests.py` computes hippocampal and amygdala volume change scores (post minus baseline), and runs paired and Welch's independent t-tests for both brain regions.
 
-`ttest_figures.py` generates boxplots of hippocampal and amygdala volume change by group.
+`ttest_figures.py` generates plots of hippocampal and amygdala volume change by group.
 
 `correlation.py` computes Pearson's correlation between hippocampal and amygdala volume changes and produces a scatter plot coloured by group.
 
