@@ -1,6 +1,6 @@
 # Bright-Light Therapy — Brain Volume Analysis
 
-This document provides structured documentation for the bright-light therapy brain volume study, completed as a practic project as part of the open science course at KI. [Course link](https://k-cir.github.io/course-open-science-in-practice/)
+This document provides structured documentation for the bright-light therapy brain volume study, completed as a practice project as part of the open science course at KI. [Course link](https://k-cir.github.io/course-open-science-in-practice/)
 
 ## Introduction
 
