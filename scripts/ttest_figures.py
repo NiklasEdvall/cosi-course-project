@@ -9,8 +9,8 @@ data = pd.read_csv("../data/bright_light_data_clean.csv")
 
 # Use the existing group colours
 colours = {
-    "Control_group": "#ec3862",
-    "Light_group": "#fae187"
+    "Control_group": "#0c5ad7",
+    "Light_group": "#f3be00"
 }
 
 # Create the figures folder if needed
