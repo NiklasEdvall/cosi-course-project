@@ -60,7 +60,7 @@ for region in ["Hippocampal_volume", "Amygdala_volume"]:
         )
 
     plt.xlabel("Time")
-    plt.ylabel("Brain volume")
+    plt.ylabel("Volume (mm$^3$)")
     plt.title(region_name + " volume: baseline vs. post-treatment")
     plt.legend()
     plt.tight_layout()
